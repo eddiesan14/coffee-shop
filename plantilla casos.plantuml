@@ -2,6 +2,7 @@
 left to right direction
 actor "Estudiante" as est
 actor "administrador cafeteria" as admin 
+actor "cajero" as cajero
 
 rectangle "sistema de pedidos coffee shop"{
     usecase "iniciar sesion" as UC1
@@ -12,4 +13,5 @@ est --> UC1
 est --> UC2
 admin -->UC1
 admin -->UC2
+UC1 <-- cajero
 @enduml
