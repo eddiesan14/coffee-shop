@@ -7,10 +7,12 @@ actor "cajero" as cajero
 rectangle "sistema de pedidos coffee shop"{
     usecase "iniciar sesion" as UC1
     usecase "realizar pedido" as UC2
+    usecase "listar pedidos" as UC3
 }
 
 est --> UC1
 est --> UC2
+est --> UC#
 admin -->UC1
 admin -->UC2
 UC1 <-- cajero
