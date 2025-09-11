@@ -1,0 +1,29 @@
+@startuml casosUsoCoffeShop
+left to right direction
+actor "Estudiante" as est
+actor "administrador cafeteria" as admin 
+actor "cajero" as cajero
+
+rectangle "sistema de pedidos coffee shop"{
+    usecase "iniciar sesion" as UC1
+    usecase "realizar pedido" as UC2
+    usecase "listar pedidos" as UC3
+    usecase "cancelar pedido" as UC4
+    usecase "entregar pedido" as UC5
+}
+
+est --> UC1
+est --> UC2
+est --> UC3
+est --> UC4
+
+admin -->UC1
+admin -->UC2
+admin -->UC3
+admin -->UC5
+
+UC1 <-- cajero
+UC3 <-- cajero
+UC5 <-- cajero
+
+@enduml
